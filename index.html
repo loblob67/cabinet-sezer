@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Sezer — Infirmière libérale à domicile, Strasbourg</title>
+    <meta name="description" content="Cabinet Sezer, infirmière libérale à Strasbourg. Soins infirmiers à domicile : Neudorf, Meinau, Esplanade, Quartier des XV.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d64545'/%3E%3Cpath d='M26 12h12v14h14v12H38v14H26V38H12V26h14z' fill='%23fff'/%3E%3C/svg%3E">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Cabinet Sezer",
+        "medicalSpecialty": "Nursing",
+        "description": "Infirmière libérale à Strasbourg. Soins infirmiers à domicile : injections, soins de plaies, surveillance médicale, gestion des traitements, soins aux personnes âgées et soins pédiatriques.",
+        "telephone": "+33666727688",
+        "url": "https://www.ulku-sezer-infirmiere.fr/",
+        "areaServed": ["Strasbourg", "Neudorf", "Meinau", "Esplanade", "Quartier des XV"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Strasbourg",
+            "postalCode": "67000",
+            "addressCountry": "FR"
+        }
+    }
+    </script>
+    <style>
+        /* POLICES HÉBERGÉES LOCALEMENT (conformité RGPD — aucun appel externe) */
+        @font-face {
+            font-family: 'Atkinson Hyperlegible';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/atkinson-hyperlegible-400.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Atkinson Hyperlegible';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('fonts/atkinson-hyperlegible-700.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Atkinson Hyperlegible';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/atkinson-hyperlegible-italic-400.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Atkinson Hyperlegible';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url('fonts/atkinson-hyperlegible-italic-700.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url('fonts/inter-variable.woff2') format('woff2');
+        }
+
+        :root {
+            --ink: #191919;
+            --soft: #5f5f5f;
+            --line: #e7e5e1;
+            --accent: #d64545;
+            --accent-dark: #b93838;
+            --cream: #faf9f7;
+            --white: #ffffff;
+            --font-display: 'Inter', sans-serif;
+            --font-body: 'Atkinson Hyperlegible', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--white);
+            color: var(--ink);
+            font-size: 17px;
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection { background: rgba(214, 69, 69, 0.15); }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1.08;
+            color: var(--ink);
+        }
+
+        .label {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: 12.5px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
+        }
+
+        .section-head { max-width: 640px; margin-bottom: 56px; }
+        .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+        .section-head h2 { font-size: clamp(32px, 4.5vw, 48px); margin-bottom: 16px; }
+        .section-head p { color: var(--soft); font-size: 18px; }
+
+        /* ---------- BOUTONS ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 26px;
+            border-radius: 12px;
+            font-family: var(--font-body);
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.25s ease;
+        }
+        .btn svg { flex-shrink: 0; }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid var(--line);
+        }
+        .btn-outline:hover {
+            border-color: var(--ink);
+            transform: translateY(-2px);
+        }
+
+        /* ---------- NAVIGATION ---------- */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            transition: box-shadow 0.3s ease;
+        }
+        .navbar.scrolled { box-shadow: 0 1px 0 var(--line); }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            text-decoration: none;
+            display: flex;
+            align-items: baseline;
+            gap: 2px;
+        }
+        .nav-logo .dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+            margin-left: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 34px;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--soft);
+            font-size: 15px;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover { color: var(--ink); }
+
+        .nav-cta {
+            padding: 10px 18px;
+            font-size: 14.5px;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+        .nav-toggle span {
+            width: 22px; height: 1.5px;
+            background: var(--ink);
+            transition: all 0.25s ease;
+        }
+        .nav-toggle.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-toggle.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            padding: 150px 0 96px;
+            border-bottom: 1px solid var(--line);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 72px;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: clamp(40px, 5.5vw, 62px);
+            margin-bottom: 24px;
+        }
+        .hero-subtitle {
+            color: var(--soft);
+            font-size: 19px;
+            max-width: 480px;
+            margin-bottom: 36px;
+        }
+        .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+        .hero-zones {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14.5px;
+            color: var(--soft);
+        }
+        .hero-zones svg { flex-shrink: 0; }
+
+        .photo-card {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            overflow: hidden;
+            background: linear-gradient(155deg, #f7ddd8 0%, #f0b4ac 45%, #d98a80 100%);
+            position: relative;
+        }
+        .photo-card img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+        }
+        .hero-photo { aspect-ratio: 4 / 3; }
+
+        /* ---------- À PROPOS ---------- */
+        .about {
+            padding: 104px 0;
+            background: var(--cream);
+            border-bottom: 1px solid var(--line);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 72px;
+            align-items: center;
+        }
+        .about-photo { aspect-ratio: 4 / 4.6; order: 0; }
+        .about h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 20px; }
+        .about p { color: var(--soft); margin-bottom: 18px; max-width: 560px; }
+        .about .btn { margin-top: 12px; }
+
+        /* ---------- ZONES ---------- */
+        .zone {
+            padding: 104px 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .zone-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+        .zone-item {
+            border-top: 1px solid var(--line);
+            padding-top: 20px;
+            transition: border-color 0.25s ease;
+        }
+        .zone-item:hover { border-top-color: var(--accent); }
+        .zone-num {
+            font-family: var(--font-display);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .zone-item h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+        .zone-item p { font-size: 15.5px; color: var(--soft); }
+
+        .map-wrap { max-width: 760px; margin: 0 auto; }
+        .map-frame {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--cream);
+        }
+        .map-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .map-note {
+            text-align: center;
+            font-size: 13.5px;
+            color: var(--soft);
+            margin-top: 14px;
+        }
+
+        /* ---------- SERVICES ---------- */
+        .services {
+            padding: 104px 0;
+            background: var(--cream);
+            border-bottom: 1px solid var(--line);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.25s ease;
+        }
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        .service-num {
+            font-family: var(--font-display);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            display: block;
+            margin-bottom: 16px;
+        }
+        .service-emoji {
+            display: block;
+            font-size: 25px;
+            line-height: 1;
+            margin: -4px 0 12px;
+        }
+        .service-card h3 { font-size: 19px; font-weight: 600; margin-bottom: 10px; }
+        .service-card p { font-size: 15.5px; color: var(--soft); }
+
+        /* ---------- CONTACT ---------- */
+        .contact {
+            padding: 104px 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 72px;
+            align-items: start;
+        }
+        .contact h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 20px; }
+        .contact-intro { color: var(--soft); margin-bottom: 36px; }
+
+        .contact-rows { display: flex; flex-direction: column; gap: 28px; }
+        .contact-row { display: flex; align-items: flex-start; gap: 16px; }
+        .contact-icon {
+            width: 44px; height: 44px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+        .contact-row .k {
+            font-family: var(--font-display);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--soft);
+            display: block;
+            margin-bottom: 2px;
+        }
+        .contact-row .v { font-size: 16.5px; font-weight: 700; }
+        .contact-row a { color: var(--ink); text-decoration: none; }
+        .contact-row a:hover { color: var(--accent); }
+
+        .urgent-note {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 14.5px;
+            color: var(--soft);
+            margin-top: 36px;
+        }
+        .urgent-note strong { color: var(--ink); }
+
+        /* ---------- FORMULAIRE ---------- */
+        .form-card {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 44px;
+            background: var(--white);
+        }
+        .form-card h3 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .form-subtitle { font-size: 15px; color: var(--soft); margin-bottom: 32px; }
+
+        .form { display: grid; gap: 20px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; gap: 8px; }
+        .form-label { font-size: 14px; font-weight: 700; color: var(--ink); }
+
+        .form-input, .form-textarea, .form-select {
+            padding: 13px 16px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            font-family: var(--font-body);
+            font-size: 15.5px;
+            color: var(--ink);
+            background: var(--white);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .form-input:focus, .form-textarea:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(214, 69, 69, 0.08);
+        }
+        .form-textarea { min-height: 110px; resize: vertical; }
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23191919' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 18px;
+        }
+
+        .form-submit { margin-top: 6px; width: 100%; }
+
+        .form-message {
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 15px;
+            display: none;
+        }
+        .form-message.success {
+            background: rgba(46, 125, 50, 0.06);
+            color: #2e7d32;
+            border: 1px solid rgba(46, 125, 50, 0.3);
+            display: block;
+        }
+        .form-message.error {
+            background: rgba(214, 69, 69, 0.06);
+            color: var(--accent-dark);
+            border: 1px solid rgba(214, 69, 69, 0.3);
+            display: block;
+        }
+
+        /* AVERTISSEMENT SOUS LE FORMULAIRE — confidentialité médicale */
+        .form-disclaimer {
+            margin-top: 18px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--soft);
+            text-align: center;
+        }
+        .form-disclaimer a { color: var(--accent); font-weight: 700; text-decoration: none; }
+        .form-disclaimer a:hover { text-decoration: underline; }
+
+        /* ---------- FOOTER ---------- */
+        .footer {
+            background: var(--cream);
+            padding: 72px 0 40px;
+        }
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 56px;
+            border-bottom: 1px solid var(--line);
+        }
+        .footer-brand .nav-logo { margin-bottom: 12px; }
+        .footer-tagline { color: var(--soft); font-size: 15.5px; max-width: 300px; }
+
+        .footer-col h4 {
+            font-family: var(--font-display);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--soft);
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a {
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 15.5px;
+            transition: color 0.2s ease;
+        }
+        .footer-col a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            padding-top: 32px;
+            text-align: center;
+        }
+        .footer-copy { font-size: 14px; color: var(--soft); margin-bottom: 8px; }
+        .footer-legal {
+            font-size: 13px;
+            color: var(--soft);
+            line-height: 1.7;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        /* ---------- APPARITION AU SCROLL ---------- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible { opacity: 1; transform: none; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            html { scroll-behavior: auto; }
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 1024px) {
+            .nav-links, .nav-cta { display: none; }
+            .nav-toggle { display: flex; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--line);
+                padding: 16px 32px 24px;
+            }
+            .nav-links.active a {
+                display: block;
+                padding: 12px 0;
+                font-size: 17px;
+                border-bottom: 1px solid var(--line);
+                color: var(--ink);
+            }
+            .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+            .zone-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 0 20px; }
+            .nav-inner { padding: 14px 20px; }
+            .hero { padding: 120px 0 64px; }
+            .about, .zone, .services, .contact { padding: 64px 0; }
+            .zone-grid, .services-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-card { padding: 28px 22px; }
+            .hero-buttons .btn { width: 100%; }
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        @media print {
+            .navbar { display: none !important; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">Cabinet Sezer<span class="dot"></span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#zone">Zones d'intervention</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary nav-cta">Prendre rendez-vous</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <span class="label reveal">Soins infirmiers à domicile · Strasbourg</span>
+                    <h1 class="reveal">Votre santé, soignée à votre domicile.</h1>
+                    <p class="hero-subtitle reveal">
+                        Le Cabinet Sezer vous accompagne avec des soins personnalisés et
+                        professionnels, dispensés avec bienveillance et expertise, dans le
+                        confort de votre domicile.
+                    </p>
+                    <div class="hero-buttons reveal">
+                        <a href="#contact" class="btn btn-primary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Prendre rendez-vous
+                        </a>
+                        <a href="#services" class="btn btn-outline">Découvrir nos services</a>
+                    </div>
+                    <p class="hero-zones reveal">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#d64545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Neudorf&nbsp;·&nbsp;Meinau&nbsp;·&nbsp;Esplanade&nbsp;·&nbsp;Quartier des XV
+                    </p>
+                </div>
+                <div class="photo-card hero-photo reveal">
+                    <img src="petite-france-aquarelle.jpg" alt="Aquarelle des maisons à colombages de la Petite France au bord de l'Ill, à Strasbourg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="about" id="apropos">
+        <div class="container">
+            <div class="about-grid">
+                <div class="photo-card about-photo reveal">
+                    <img src="infirmiere.jpg" alt="Infirmière du Cabinet Sezer, masque et blouse blanche">
+                </div>
+                <div>
+                    <span class="label reveal">Qui sommes-nous</span>
+                    <h2 class="reveal">Une infirmière libérale dévouée, au service de votre bien-être.</h2>
+                    <p class="reveal">
+                        Bienvenue au Cabinet Sezer, où nous mettons votre santé et votre
+                        bien-être au cœur de notre pratique. En tant qu'infirmière libérale à
+                        Strasbourg, je m'engage à vous offrir des soins de qualité, personnalisés
+                        et adaptés à vos besoins spécifiques, dans le confort de votre domicile.
+                    </p>
+                    <p class="reveal">
+                        Avec plusieurs années d'expérience dans le domaine des soins infirmiers,
+                        je suis dédiée à fournir une prise en charge professionnelle, respectueuse
+                        et attentionnée à chacun de mes patients.
+                    </p>
+                    <a href="#contact" class="btn btn-outline reveal">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZONES D'INTERVENTION -->
+    <section class="zone" id="zone">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="label">Zone d'intervention</span>
+                <h2>Nous intervenons à Strasbourg</h2>
+                <p>Le Cabinet Sezer se déplace à votre domicile dans quatre quartiers de Strasbourg et leurs alentours.</p>
+            </div>
+            <div class="zone-grid">
+                <div class="zone-item reveal">
+                    <span class="zone-num">01</span>
+                    <h3>Neudorf</h3>
+                    <p>Interventions rapides dans tout le quartier de Neudorf.</p>
+                </div>
+                <div class="zone-item reveal">
+                    <span class="zone-num">02</span>
+                    <h3>Meinau</h3>
+                    <p>Service disponible à Meinau et ses alentours.</p>
+                </div>
+                <div class="zone-item reveal">
+                    <span class="zone-num">03</span>
+                    <h3>Esplanade</h3>
+                    <p>Domicile et entreprises sur la zone de l'Esplanade.</p>
+                </div>
+                <div class="zone-item reveal">
+                    <span class="zone-num">04</span>
+                    <h3>Quartier des XV</h3>
+                    <p>Couverture complète du quartier des XV.</p>
+                </div>
+            </div>
+            <div class="map-wrap reveal">
+                <div class="map-frame">
+                    <img src="carte-quartiers.png" width="1028" height="714" loading="lazy"
+                         alt="Carte détaillée de Strasbourg : rues, rivières, rails et gares ; les quartiers d'intervention Neudorf, Meinau, Esplanade et Quartier des XV sont mis en valeur en rouge corail doux, avec légende et flèche Nord.">
+                </div>
+                <p class="map-note">
+                    Nos zones d'intervention à Strasbourg : Neudorf, Meinau, Esplanade et Quartier des XV.
+                    Fond de carte dessiné d'après les données OpenStreetMap, licence ODbL.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-head center reveal">
+                <span class="label">Nos services</span>
+                <h2>Des soins adaptés à vos besoins</h2>
+                <p>Une large gamme de services infirmiers à domicile pour répondre à tous vos besoins de santé.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <span class="service-num">01</span>
+                    <span class="service-emoji">💉</span>
+                    <h3>Injections et perfusions</h3>
+                    <p>Administration de médicaments par voie injectable ou intraveineuse, avec suivi personnalisé.</p>
+                </div>
+                <div class="service-card reveal">
+                    <span class="service-num">02</span>
+                    <span class="service-emoji">🩹</span>
+                    <h3>Soins de plaies</h3>
+                    <p>Pansements, soins post-opératoires et prise en charge des plaies chroniques ou aiguës.</p>
+                </div>
+                <div class="service-card reveal">
+                    <span class="service-num">03</span>
+                    <span class="service-emoji">🩺</span>
+                    <h3>Surveillance médicale</h3>
+                    <p>Suivi des paramètres vitaux, contrôle glycémique, tension artérielle et autres examens de routine.</p>
+                </div>
+                <div class="service-card reveal">
+                    <span class="service-num">04</span>
+                    <span class="service-emoji">💊</span>
+                    <h3>Gestion des traitements</h3>
+                    <p>Aide à l'organisation et à la prise des médicaments, éducation thérapeutique.</p>
+                </div>
+                <div class="service-card reveal">
+                    <span class="service-num">05</span>
+                    <span class="service-emoji">🧓</span>
+                    <h3>Soins aux personnes âgées</h3>
+                    <p>Accompagnement global des seniors à domicile : toilette, habillage, aide à la mobilité, soins palliatifs.</p>
+                </div>
+                <div class="service-card reveal">
+                    <span class="service-num">06</span>
+                    <span class="service-emoji">👶</span>
+                    <h3>Soins pédiatriques</h3>
+                    <p>Prise en charge des enfants : vaccins, soins courants, surveillance de la croissance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <span class="label reveal">Contact</span>
+                    <h2 class="reveal">Contactez-nous</h2>
+                    <p class="contact-intro reveal">
+                        N'hésitez pas à nous contacter pour toute question ou pour prendre
+                        rendez-vous. Nous vous répondrons dans les meilleurs délais.
+                    </p>
+                    <div class="contact-rows">
+                        <div class="contact-row reveal">
+                            <div class="contact-icon">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="k">Téléphone</span>
+                                <span class="v"><a href="tel:0666727688">06 66 72 76 88</a></span>
+                            </div>
+                        </div>
+                        <!-- Adresse professionnelle : activee seulement apres la creation de l'e-mail OVH
+                             (contact@ulku-sezer-infirmiere.fr). En attendant, remettre ulkusezer62@gmail.com. -->
+                        <div class="contact-row reveal">
+                            <div class="contact-icon">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <span class="k">Email</span>
+                                <span class="v"><a href="mailto:contact@ulku-sezer-infirmiere.fr">contact@ulku-sezer-infirmiere.fr</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-row reveal">
+                            <div class="contact-icon">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="k">Zone d'intervention</span>
+                                <span class="v">Strasbourg — Neudorf, Meinau, Esplanade, Quartier des XV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="urgent-note reveal">
+                        <strong>Urgence médicale ?</strong> Ce site n'est pas un service d'urgence.
+                        En cas d'urgence, appelez le <strong>15</strong> (SAMU) ou le <strong>112</strong>.
+                    </div>
+                </div>
+
+                <div class="form-card reveal" id="formulaire">
+                    <h3>Prendre rendez-vous</h3>
+                    <p class="form-subtitle">Remplissez ce formulaire et nous vous recontacterons dans les plus brefs délais.</p>
+                    <form class="form" id="contactForm" action="https://formspree.io/f/mjvqknlo" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="nom">Nom *</label>
+                                <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Votre prénom" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" class="form-input" placeholder="06 12 34 56 78" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="adresse">Adresse *</label>
+                            <input type="text" id="adresse" name="adresse" class="form-input" placeholder="Votre adresse complète (quartier, rue, code postal)" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="service">Service souhaité *</label>
+                            <select id="service" name="service" class="form-select" required>
+                                <option value="" disabled selected>Sélectionnez un service</option>
+                                <option value="injection">Injection / Perfusion</option>
+                                <option value="plaie">Soins de plaies</option>
+                                <option value="surveillance">Surveillance médicale</option>
+                                <option value="traitement">Gestion des traitements</option>
+                                <option value="senior">Soins aux personnes âgées (incluant soins palliatifs)</option>
+                                <option value="pediatrique">Soins pédiatriques</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="urgence">Niveau d'urgence</label>
+                            <select id="urgence" name="urgence" class="form-select">
+                                <option value="standard">Standard (sous 48h)</option>
+                                <option value="urgent">Urgent (sous 24h)</option>
+                                <option value="immediat">Immédiat (aujourd'hui)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Décrivez vos besoins ou posez votre question…" required></textarea>
+                        </div>
+                        <div class="form-message" id="formMessage"></div>
+                        <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+                            <span id="submitText">Envoyer la demande</span>
+                        </button>
+                    </form>
+                    <p class="form-disclaimer">
+                        🔒 Merci de ne pas transmettre d'informations médicales ou confidentielles
+                        par ce formulaire (symptômes, traitements, résultats d'analyse). Pour toute
+                        question de santé, appelez-nous directement au
+                        <a href="tel:0666727688">06 66 72 76 88</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">Cabinet Sezer<span class="dot"></span></a>
+                    <p class="footer-tagline">Soins infirmiers à domicile, avec bienveillance et expertise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Injections et perfusions</a></li>
+                        <li><a href="#services">Soins de plaies</a></li>
+                        <li><a href="#services">Surveillance médicale</a></li>
+                        <li><a href="#services">Gestion des traitements</a></li>
+                        <li><a href="#services">Soins aux personnes âgées</a></li>
+                        <li><a href="#services">Soins pédiatriques</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Zones d'intervention</h4>
+                    <ul>
+                        <li><a href="#zone">Neudorf</a></li>
+                        <li><a href="#zone">Meinau</a></li>
+                        <li><a href="#zone">Esplanade</a></li>
+                        <li><a href="#zone">Quartier des XV</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informations</h4>
+                    <ul>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#formulaire">Prendre rendez-vous</a></li>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Cabinet Sezer — Infirmière libérale à Strasbourg. Tous droits réservés.</p>
+                <p class="footer-legal">
+                    Site non commercial à but purement informatif : les informations présentées visent
+                    uniquement à informer les patients et ne constituent en aucun cas un avis médical.
+                    En cas d'urgence, appelez le 15 (SAMU) ou le 112.
+                    Consultez nos <a href="mentions-legales.html">mentions légales</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Menu mobile
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Navbar au scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 10);
+        }, { passive: true });
+
+        // Apparition au scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Formulaire : validation + envoi via Formspree
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitText = document.getElementById('submitText');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+
+            let isValid = true;
+            const requiredFields = ['nom', 'prenom', 'email', 'telephone', 'adresse', 'service', 'message'];
+            requiredFields.forEach(field => {
+                const el = contactForm.querySelector('[name="' + field + '"]');
+                if (!data[field] || String(data[field]).trim() === '') {
+                    isValid = false;
+                    el.style.borderColor = '#d64545';
+                } else {
+                    el.style.borderColor = '';
+                }
+            });
+
+            if (!isValid) {
+                formMessage.textContent = 'Veuillez remplir tous les champs obligatoires (marqués par *).';
+                formMessage.className = 'form-message error';
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                formMessage.textContent = 'Veuillez entrer une adresse email valide.';
+                formMessage.className = 'form-message error';
+                contactForm.querySelector('[name="email"]').style.borderColor = '#d64545';
+                return;
+            }
+
+            const phoneRegex = /^[\d\s\-\(\)\+]{10,}$/;
+            if (!phoneRegex.test(data.telephone)) {
+                formMessage.textContent = 'Veuillez entrer un numéro de téléphone valide.';
+                formMessage.className = 'form-message error';
+                contactForm.querySelector('[name="telephone"]').style.borderColor = '#d64545';
+                return;
+            }
+
+            submitText.textContent = 'Envoi en cours…';
+            submitBtn.disabled = true;
+            formMessage.textContent = '';
+            formMessage.className = 'form-message';
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    formMessage.textContent = 'Message envoyé avec succès ! Nous vous recontacterons dans les plus brefs délais.';
+                    formMessage.className = 'form-message success';
+                    submitText.textContent = 'Message envoyé ✓';
+                    setTimeout(() => {
+                        contactForm.reset();
+                        submitText.textContent = 'Envoyer la demande';
+                        submitBtn.disabled = false;
+                    }, 5000);
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    formMessage.textContent = 'Une erreur est survenue. Veuillez réessayer ou nous appeler au 06 66 72 76 88.';
+                    formMessage.className = 'form-message error';
+                    submitText.textContent = 'Envoyer la demande';
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                formMessage.textContent = 'Erreur de connexion. Veuillez vérifier votre connexion internet ou nous appeler au 06 66 72 76 88.';
+                formMessage.className = 'form-message error';
+                submitText.textContent = 'Envoyer la demande';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
